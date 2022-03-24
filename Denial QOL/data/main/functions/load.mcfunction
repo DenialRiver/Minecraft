@@ -1,0 +1,43 @@
+tellraw @a {"text":"Mob Health datapack has been loaded."}
+tag @e remove maxchecked
+scoreboard objectives add health dummy
+scoreboard objectives add Health health
+scoreboard objectives add Mana dummy
+scoreboard objectives add maxMana dummy
+scoreboard objectives add Hunger food
+scoreboard objectives add maxHealth dummy
+scoreboard objectives add maxmobhealth dummy
+scoreboard objectives add prevmobhealth dummy
+scoreboard objectives add Saturation dummy
+scoreboard objectives add xplevel dummy
+scoreboard objectives add finalspeed dummy
+scoreboard players set 5 xplevel 5
+scoreboard objectives add oakmined minecraft.mined:minecraft.oak_log
+scoreboard objectives add birchmined minecraft.mined:minecraft.birch_log
+scoreboard objectives add sprucemined minecraft.mined:minecraft.spruce_log
+scoreboard objectives add acaciamined minecraft.mined:minecraft.acacia_log
+scoreboard objectives add darkoakmined minecraft.mined:minecraft.dark_oak_log
+scoreboard objectives add junglemined minecraft.mined:minecraft.jungle_log
+scoreboard objectives add crimsonmined minecraft.mined:minecraft.crimson_stem
+scoreboard objectives add warpedmined minecraft.mined:minecraft.warped_stem
+scoreboard objectives add desperatedmgtaken minecraft.custom:minecraft.damage_taken
+scoreboard objectives add mendinglevel dummy
+scoreboard objectives add sharpnesslevel dummy
+scoreboard objectives add smitelevel dummy
+scoreboard objectives add banelevel dummy
+scoreboard objectives add lootinglevel dummy
+scoreboard objectives add firelevel dummy
+scoreboard objectives add sweepinglevel dummy
+scoreboard objectives add unbreakinglevel dummy
+scoreboard objectives add kblevel dummy
+scoreboard objectives add vanishinglevel dummy
+scoreboard objectives add chargetimer dummy
+scoreboard objectives add clawdmg minecraft.custom:minecraft.damage_dealt
+scoreboard objectives add clawcount dummy
+scoreboard objectives add swipetime dummy
+scoreboard objectives add countdmg minecraft.custom:minecraft.damage_dealt
+scoreboard objectives add countcount dummy
+scoreboard objectives add countcd dummy
+scoreboard objectives add actionbartimer dummy
+scoreboard objectives add commanderhealcd dummy
+scoreboard objectives add commandersummoncd dummy
