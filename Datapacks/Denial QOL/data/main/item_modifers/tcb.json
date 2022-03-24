@@ -1,0 +1,11 @@
+[
+  {
+    "function": "minecraft:copy_nbt",
+    "source": "this",
+    "ops": []
+  },
+  {
+    "function": "minecraft:set_nbt",
+    "tag": "{ChargedProjectiles:[{id:\"minecraft:spectral_arrow\",Count:1b}]"
+  }
+]

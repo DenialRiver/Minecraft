@@ -1,0 +1,259 @@
+[
+  {
+    "function": "minecraft:copy_name",
+    "source": "this"
+  },
+  {
+    "function": "minecraft:set_nbt",
+    "tag": "{rustlevel:1,copper:1}",
+    "conditions": [
+      {
+        "condition": "minecraft:entity_scores",
+        "entity": "this",
+        "scores": {
+          "copperusecount": {
+            "min": 1,
+            "max": 49
+          }
+        }
+      }
+    ]
+  },
+  {
+    "function": "minecraft:set_nbt",
+    "tag": "{rustlevel:2,copper:1}",
+    "conditions": [
+      {
+        "condition": "minecraft:entity_scores",
+        "entity": "this",
+        "scores": {
+          "copperusecount": {
+            "min": 50,
+            "max": 199
+          }
+        }
+      }
+    ]
+  },
+  {
+    "function": "minecraft:set_nbt",
+    "tag": "{rustlevel:3,copper:1}",
+    "conditions": [
+      {
+        "condition": "minecraft:entity_scores",
+        "entity": "this",
+        "scores": {
+          "copperusecount": {
+            "min": 200,
+            "max": 499
+          }
+        }
+      }
+    ]
+  },
+  {
+    "function": "minecraft:set_nbt",
+    "tag": "{rustlevel:4,copper:1}",
+    "conditions": [
+      {
+        "condition": "minecraft:entity_scores",
+        "entity": "this",
+        "scores": {
+          "copperusecount": {
+            "min": 500
+          }
+        }
+      }
+    ]
+  },
+  {
+    "function": "minecraft:copy_nbt",
+    "source": {
+      "type": "minecraft:storage",
+      "source": "copyenchants:copy"
+    },
+    "ops": [
+      {
+        "source": "copperusecount",
+        "target": "copperusecount",
+        "op": "replace"
+      }
+    ]
+  },
+  {
+    "function": "minecraft:set_damage",
+    "damage": {
+      "type": "minecraft:score",
+      "target": "this",
+      "score": "damagelevel",
+      "scale": 0.01666666666
+    },
+    "add": false
+  },
+  {
+    "function": "minecraft:set_lore",
+    "entity": "this",
+    "lore": [
+      {
+        "text": "Rust I",
+        "color": "yellow",
+        "italic": false
+      },
+      {
+        "text": "Deals Poison I (0:05) to all",
+        "color": "blue",
+        "italic": false
+      },
+      {
+        "text": "enemies hit by this sword.",
+        "color": "blue",
+        "italic": false
+      },
+      {
+        "text": "Upgrades at 50 uses",
+        "color": "dark_gray",
+        "italic": false
+      }
+    ],
+    "replace": true,
+    "conditions": [
+      {
+        "condition": "minecraft:entity_scores",
+        "entity": "this",
+        "scores": {
+          "rustlevel": 1
+        }
+      }
+    ]
+  },
+  {
+    "function": "minecraft:set_lore",
+    "entity": "this",
+    "lore": [
+      {
+        "text": "Rust II",
+        "color": "yellow",
+        "italic": false
+      },
+      {
+        "text": "Deals Poison II (0:06) to all",
+        "color": "blue",
+        "italic": false
+      },
+      {
+        "text": "enemies hit by this sword.",
+        "color": "blue",
+        "italic": false
+      },
+      {
+        "text": "Upgrades at 200 uses",
+        "color": "dark_gray",
+        "italic": false
+      }
+    ],
+    "replace": true,
+    "conditions": [
+      {
+        "condition": "minecraft:entity_scores",
+        "entity": "this",
+        "scores": {
+          "rustlevel": 2
+        }
+      }
+    ]
+  },
+  {
+    "function": "minecraft:set_lore",
+    "entity": "this",
+    "lore": [
+      {
+        "text": "Rust III",
+        "color": "yellow",
+        "italic": false
+      },
+      {
+        "text": "Deals Poison III (0:07) to all",
+        "color": "blue",
+        "italic": false
+      },
+      {
+        "text": "enemies hit by this sword.",
+        "color": "blue",
+        "italic": false
+      },
+      {
+        "text": "Fully upgrades at 500 uses",
+        "color": "dark_gray",
+        "italic": false
+      }
+    ],
+    "replace": true,
+    "conditions": [
+      {
+        "condition": "minecraft:entity_scores",
+        "entity": "this",
+        "scores": {
+          "rustlevel": 3
+        }
+      }
+    ]
+  },
+  {
+    "function": "minecraft:set_lore",
+    "entity": "this",
+    "lore": [
+      {
+        "text": "Rust IV",
+        "color": "yellow",
+        "italic": false
+      },
+      {
+        "text": "Deals Poison IV (0:08) to all",
+        "color": "blue",
+        "italic": false
+      },
+      {
+        "text": "enemies hit by this sword.",
+        "color": "blue",
+        "italic": false
+      },
+      {
+        "text": "Maxed out!",
+        "color": "gold",
+        "italic": false
+      }
+    ],
+    "replace": true,
+    "conditions": [
+      {
+        "condition": "minecraft:entity_scores",
+        "entity": "this",
+        "scores": {
+          "rustlevel": 4
+        }
+      }
+    ]
+  },
+  {
+    "function": "minecraft:set_lore",
+    "entity": "this",
+    "lore": [
+      {
+        "text": "Uses: ",
+        "color": "dark_gray",
+        "italic": false,
+        "extra": [
+          {
+            "score": {
+              "name": "@s",
+              "objective": "copperusecount"
+            },
+            "color": "dark_gray",
+            "italic": false
+          }
+        ]
+      }
+    ],
+    "replace": false
+  }
+]
